@@ -1,1 +1,15 @@
-<p>template works!</p>
+<div class="body">
+    <app-listado
+        [listado]="productos"
+        >
+    </app-listado>
+</div>
+<footer>
+    <app-menu
+        [existenProductos]="productos.length > 0"
+        (nuevo)="crearElemento()"
+        (retirar)="retirarMarcados()"
+        (limpiar)="limpiarLista()"
+        >
+    </app-menu>
+</footer>

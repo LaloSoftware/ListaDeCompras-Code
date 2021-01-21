@@ -1,0 +1,13 @@
+<mat-list role="list" *ngIf="listado && listado.length > 0;else noData">
+    <mat-list-item role="listitem" *ngFor="let producto of listado" [ngStyle]="{comprado: producto.comprado}">
+        <section class="example-section">
+            <mat-checkbox (click)="cambiarEstado(producto)" class="example-margin"><strong>{{producto["descripcion"]}}</strong> {{producto["cantidad"]}}</mat-checkbox>
+        </section>
+    </mat-list-item>
+</mat-list>
+
+<ng-template #noData>
+    <div class="sinDatos">
+        <h2>Sin productos para mostrar</h2>
+    </div>
+</ng-template>

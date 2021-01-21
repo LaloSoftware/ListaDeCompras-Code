@@ -1,0 +1,17 @@
+<div class="menu">
+    <span *ngIf="existenProductos">
+        <button mat-mini-fab (click)="limpiar.emit()" color="warn">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </span>
+    <span *ngIf="existenProductos">
+        <button mat-mini-fab (click)="retirar.emit()" color="primary">
+            <mat-icon>remove</mat-icon>
+        </button>
+    </span>
+    <span>
+        <button mat-fab (click)="nuevo.emit()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </span>
+</div>

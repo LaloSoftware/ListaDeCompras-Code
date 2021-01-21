@@ -2,6 +2,11 @@
     width: 100%
     min-height: 100%
     margin: 0
+
+mat-toolbar
+    position: fixed
+    z-index: 0
+    top: 0
     
 mat-drawer-content
     background-color: #222222
@@ -19,4 +24,22 @@ mat-drawer
     justify-content: space-between
     align-items: center
     flex-flow: row wrap
-    
+
+ul
+    list-style: none
+    display: flex
+    flex-flow: column wrap
+    justify-content: flex-start
+    align-items: flex-start
+    li
+        margin: 20px
+        width: 100%
+        .active
+            background-color: #222222
+            color: #bbbbbb !important
+        a
+            text-decoration: none
+            position: fixed
+            padding: 10px 0
+            width: 100%
+            color: #eeeeee
