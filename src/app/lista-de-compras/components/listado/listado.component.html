@@ -1,7 +1,10 @@
 <mat-list role="list" *ngIf="listado && listado.length > 0;else noData">
-    <mat-list-item role="listitem" *ngFor="let producto of listado" [ngStyle]="{comprado: producto.comprado}">
+    <mat-list-item role="listitem" *ngFor="let producto of listado; let i = index" [ngStyle]="{comprado: producto.comprado}">
+        <button mat-icon-button color="warn" (click)="eliminar.emit(producto)">
+            <mat-icon>delete</mat-icon>
+        </button>
         <section class="example-section">
-            <mat-checkbox (click)="cambiarEstado(producto)" class="example-margin"><strong>{{producto["descripcion"]}}</strong> {{producto["cantidad"]}}</mat-checkbox>
+            <mat-checkbox (click)="guardar.emit()" [(ngModel)]="producto.comprado" [checked]="producto.comprado" [id]="i+'-checkbox'" class="example-margin"><strong>{{producto["descripcion"]}}</strong> {{producto["cantidad"]}}</mat-checkbox>
         </section>
     </mat-list-item>
 </mat-list>

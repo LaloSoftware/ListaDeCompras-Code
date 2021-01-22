@@ -14,7 +14,7 @@ export class NuevoComponent implements OnInit {
     private dialogRef: MatDialogRef<NuevoComponent>
     ) {
     this.nuevoProductoFG = new FormGroup({
-      descripcion: new FormControl('', [Validators.required]),
+      descripcion: new FormControl('', [Validators.required, Validators.maxLength(20)]),
       cantidad: new FormControl(1, [Validators.required, Validators.min(1)]),
       comprado: new FormControl(false, [Validators.required])
     });

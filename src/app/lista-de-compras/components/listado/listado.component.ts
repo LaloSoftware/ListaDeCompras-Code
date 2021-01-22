@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IProducto } from 'src/app/models/producto.interface';
 
 @Component({
@@ -8,13 +8,11 @@ import { IProducto } from 'src/app/models/producto.interface';
 })
 export class ListadoComponent implements OnInit {
   @Input() listado: IProducto[] | undefined;
+  @Output() eliminar = new EventEmitter();
+  @Output() guardar = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  cambiarEstado(producto: IProducto){
-    producto.comprado = !producto.comprado;
   }
 }

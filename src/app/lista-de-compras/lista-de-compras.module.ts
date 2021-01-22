@@ -6,7 +6,7 @@ import { TemplateComponent } from './template.component';
 import { MaterialModule } from '../material.module';
 import { ListadoComponent } from './components/listado/listado.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuevoComponent } from './components/nuevo/nuevo.component';
 
 
@@ -16,7 +16,8 @@ import { NuevoComponent } from './components/nuevo/nuevo.component';
     CommonModule,
     ListaDeComprasRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ListaDeComprasModule { }

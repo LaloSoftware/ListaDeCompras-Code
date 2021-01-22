@@ -18,6 +18,7 @@ export class TemplateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.recuperarLista();
   }
 
   crearElemento(){
@@ -27,16 +28,41 @@ export class TemplateComponent implements OnInit {
     newDialog.afterClosed().subscribe(
       res => {
         if(res) this.productos.push(res);
-        console.log(this.productos);
+        this.guardarEnMemoria();
       }
     );
   }
 
+  eliminarElemento(producto: IProducto){
+    this.productos = this.productos.filter(p => p !== producto);
+    this.guardarEnMemoria();
+  }
+
   limpiarLista(){
     this.productos = [];
+    this.eliminarDeMemoria();
   }
 
   retirarMarcados(){
     this.productos = this.productos.filter(p => p.comprado === false);
+    this.guardarEnMemoria();
+  }
+
+  guardarEnMemoria(){
+    console.log(this.productos);
+    localStorage.setItem("lista", JSON.stringify(this.productos));
+  }
+
+  recuperarLista(){
+    let lista = localStorage.getItem("lista");
+    if(lista){
+      this.productos = JSON.parse(lista);
+    } else {
+      this.productos = [];
+    }
+  }
+
+  eliminarDeMemoria(){
+    localStorage.removeItem("lista");
   }
 }
