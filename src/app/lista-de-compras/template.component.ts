@@ -49,8 +49,8 @@ export class TemplateComponent implements OnInit {
   }
 
   guardarEnMemoria(){
-    console.log(this.productos);
     localStorage.setItem("lista", JSON.stringify(this.productos));
+    console.log(this.productos);
   }
 
   recuperarLista(){
