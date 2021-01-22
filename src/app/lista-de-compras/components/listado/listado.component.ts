@@ -15,4 +15,11 @@ export class ListadoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  functGuardar() {
+    setTimeout(() => {
+      console.log('esperando');
+      this.guardar.emit();
+    }, 200);
+  }
 }

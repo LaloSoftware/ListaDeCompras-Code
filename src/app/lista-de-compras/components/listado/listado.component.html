@@ -4,7 +4,7 @@
             <mat-icon>delete</mat-icon>
         </button>
         <section class="example-section">
-            <mat-checkbox (click)="guardar.emit()" [(ngModel)]="producto.comprado" [checked]="producto.comprado" [id]="i+'-checkbox'" class="example-margin"><strong>{{producto["descripcion"]}}</strong> {{producto["cantidad"]}}</mat-checkbox>
+            <mat-checkbox (click)="functGuardar()" [(ngModel)]="producto.comprado" [checked]="producto.comprado" [id]="i+'-checkbox'" class="example-margin"><strong>{{producto["descripcion"]}}</strong> {{producto["cantidad"]}}</mat-checkbox>
         </section>
     </mat-list-item>
 </mat-list>
