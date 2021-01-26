@@ -1,27 +1,15 @@
 # ListaDeCompras
+Esta es una aplicación funcional dónde el usuario puede almacenar información de productos como recordatorio para comprarlos despues (o esa es la intención).
+Sus funciones son muy básicas pero la intención de este proyecto fue crear una PWA, aunque es completamente funcional.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+## PWA
+La aplicación permite agregarse como aplicación a los dispositivos con la opción del navegador *Install App* o *Agregar a la pantalla de inicio*, tanto en dispositivos móviles (Android, IOS), cómo en equipos de escritorio.
 
-## Development server
+## Datos
+Los datos son guardados de forma local por lo que puede usarse de forma offline sin ningún problema
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Actualizaciones
+Las actualizaciones de la aplicación se hacen de forma automatica por lo que no es necesario tener que acceder al sitio y volver a instalar la aplicación en ningún dispositivo
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Instrucciones
+La aplicación cuenta con un apartado de instrucciones para reconocer cada una de las funciones que ofrece.
