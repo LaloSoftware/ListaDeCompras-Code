@@ -1,7 +1,7 @@
 {
-  "name": "ListaDeCompras",
-  "short_name": "ListaDeCompras",
-  "theme_color": "#1976d2",
+  "name": "Lista De Compras",
+  "short_name": "Lista De Compras",
+  "theme_color": "#344955",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
