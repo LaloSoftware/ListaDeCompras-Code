@@ -13,3 +13,7 @@ Las actualizaciones de la aplicación se hacen de forma automatica por lo que no
 
 ## Instrucciones
 La aplicación cuenta con un apartado de instrucciones para reconocer cada una de las funciones que ofrece.
+
+## Hosting
+Para acceder a la aplicación solo tienes que acceder al siguiente link:
+https://lista-de-compras-pwa.web.app/
