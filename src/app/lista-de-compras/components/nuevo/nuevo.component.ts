@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -7,7 +7,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   templateUrl: './nuevo.component.html',
   styleUrls: ['./nuevo.component.sass']
 })
-export class NuevoComponent implements OnInit {
+export class NuevoComponent {
   nuevoProductoFG: FormGroup;
 
   constructor(
@@ -18,9 +18,6 @@ export class NuevoComponent implements OnInit {
       cantidad: new FormControl(1, [Validators.required, Validators.min(1)]),
       comprado: new FormControl(false, [Validators.required])
     });
-  }
-
-  ngOnInit(): void {
   }
 
   onSubmit(){
